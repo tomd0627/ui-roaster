@@ -15,7 +15,7 @@
     /* Text */
     --color-text: #f0f4ff;
     --color-text-secondary: #94a3b8;
-    --color-text-muted: #64748b;
+    --color-text-muted: #8497af;
 
     /* Brand accents */
     --color-heat: #ff4d6d;
@@ -29,7 +29,7 @@
     --color-focus: #00e5ff;
 
     /* Severity */
-    --color-severity-low: #64748b;
+    --color-severity-low: #8497af;
     --color-severity-mid: #00e5ff;
     --color-severity-high: #ff4d6d;
   }

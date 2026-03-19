@@ -48,7 +48,10 @@ export function DropZone({ onFilesAccepted, isDisabled = false }: DropZoneProps)
         outlineColor: "var(--color-focus)",
       }}
     >
-      <input {...getInputProps()} />
+      <label htmlFor="dropzone-file-input" className="sr-only">
+        Upload a UI screenshot (PNG, JPG, or WebP, max 5 MB)
+      </label>
+      <input {...getInputProps({ id: "dropzone-file-input" })} />
 
       {/* Upload icon — aria-hidden so screen readers skip the decorative illustration */}
       <div

@@ -120,8 +120,14 @@ export async function callClaude(
 
   const rawText = (firstBlock as TextBlock).text.trim();
 
+  // Strip markdown code fences if Claude wrapped the JSON despite instructions
+  const jsonText = rawText
+    .replace(/^```(?:json)?\s*/i, "")
+    .replace(/\s*```\s*$/i, "")
+    .trim();
+
   try {
-    const parsed: unknown = JSON.parse(rawText);
+    const parsed: unknown = JSON.parse(jsonText);
     // Basic shape validation
     if (
       typeof parsed !== "object" ||
@@ -133,6 +139,6 @@ export async function callClaude(
     }
     return parsed as RoastResult;
   } catch {
-    throw new ClaudeParseError("Failed to parse Claude JSON response", rawText);
+    throw new ClaudeParseError("Failed to parse Claude JSON response", jsonText);
   }
 }

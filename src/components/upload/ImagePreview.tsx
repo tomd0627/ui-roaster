@@ -62,9 +62,10 @@ export function ImagePreview({
           )}
         </div>
         <button
+          type="button"
           onClick={onRemove}
           aria-label="Remove image and start over"
-          className="shrink-0 rounded-md p-1.5 transition-colors"
+          className="shrink-0 rounded-md p-1.5 transition-colors cursor-pointer"
           style={{ color: "var(--color-text-secondary)" }}
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" width={16} height={16} aria-hidden="true">

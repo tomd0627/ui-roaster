@@ -19,7 +19,7 @@ export function RoastButton({ onClick, isLoading, isDisabled }: RoastButtonProps
       disabled={isDisabled || isLoading}
       aria-disabled={isDisabled || isLoading}
       aria-busy={isLoading}
-      className="flex w-full items-center justify-center gap-2.5 rounded-xl py-4 text-base font-bold tracking-wide transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50"
+      className="flex w-full cursor-pointer items-center justify-center gap-2.5 rounded-xl py-4 text-base font-bold tracking-wide transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50"
       style={{
         backgroundColor: isDisabled || isLoading ? "var(--color-heat)" : "var(--color-heat)",
         color: "#ffffff",

@@ -43,7 +43,7 @@ export function ShareBar({ roast, onReset }: ShareBarProps) {
         type="button"
         onClick={handleCopy}
         aria-label={copied ? "Roast copied to clipboard" : "Copy roast to clipboard"}
-        className="flex flex-1 items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-all"
+        className="flex flex-1 items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-all cursor-pointer"
         style={{
           border: "1px solid var(--color-digital)",
           color: copied ? "var(--color-bg)" : "var(--color-digital)",
@@ -74,7 +74,7 @@ export function ShareBar({ roast, onReset }: ShareBarProps) {
         type="button"
         onClick={onReset}
         aria-label="Start over with a new screenshot"
-        className="flex flex-1 items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-all"
+        className="flex flex-1 items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-all cursor-pointer"
         style={{
           border: "1px solid var(--color-border)",
           color: "var(--color-text-secondary)",

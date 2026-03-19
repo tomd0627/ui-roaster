@@ -38,7 +38,7 @@ export function Button({
       disabled={isDisabled}
       aria-disabled={isDisabled}
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-md px-5 py-2.5 text-sm font-semibold transition-opacity",
+        "inline-flex items-center justify-center gap-2 rounded-md px-5 py-2.5 text-sm font-semibold transition-opacity cursor-pointer",
         isDisabled && "cursor-not-allowed opacity-50",
         className
       )}
