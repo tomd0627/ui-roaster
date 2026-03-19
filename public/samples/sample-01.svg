@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Legacy government portal: cluttered, gray, poor hierarchy -->
+  <rect width="800" height="600" fill="#c0c0c0"/>
+  <!-- Header -->
+  <rect width="800" height="60" fill="#000080"/>
+  <text x="10" y="40" font-family="Times New Roman" font-size="20" fill="white">DEPARTMENT OF MOTOR VEHICLES - ONLINE SERVICES PORTAL v2.1</text>
+  <!-- Navigation bar: too many items -->
+  <rect y="60" width="800" height="30" fill="#808080"/>
+  <text x="5" y="80" font-family="Arial" font-size="11" fill="white">Home | Services | Forms | FAQ | Contact | About | News | Links | Help | Site Map | Accessibility | Privacy | Terms | Login | Register</text>
+  <!-- Body: two clashing columns -->
+  <rect x="0" y="90" width="180" height="510" fill="#d0d0d0"/>
+  <!-- Sidebar links -->
+  <text x="5" y="110" font-family="Times" font-size="12" fill="blue" text-decoration="underline">• Apply for License</text>
+  <text x="5" y="130" font-family="Times" font-size="12" fill="purple" text-decoration="underline">• Renew Registration</text>
+  <text x="5" y="150" font-family="Times" font-size="12" fill="blue" text-decoration="underline">• Pay Fines</text>
+  <text x="5" y="170" font-family="Times" font-size="12" fill="green" text-decoration="underline">• Check Status</text>
+  <text x="5" y="190" font-family="Times" font-size="12" fill="red" text-decoration="underline">• NEW: ePermits</text>
+  <text x="5" y="210" font-family="Times" font-size="12" fill="blue" text-decoration="underline">• Vehicle History</text>
+  <text x="5" y="230" font-family="Times" font-size="12" fill="blue" text-decoration="underline">• Dealer Services</text>
+  <!-- Banner ad -->
+  <rect x="5" y="250" width="170" height="80" fill="yellow" stroke="red" stroke-width="3"/>
+  <text x="10" y="270" font-family="Arial" font-size="10" fill="red">⭐ CLICK HERE ⭐</text>
+  <text x="10" y="285" font-family="Arial" font-size="10" fill="blue">Get Auto Insurance!</text>
+  <text x="10" y="300" font-family="Arial" font-size="10" fill="red">Save up to 40%!!!!</text>
+  <!-- Main content -->
+  <rect x="180" y="90" width="620" height="510" fill="white"/>
+  <text x="190" y="115" font-family="Times New Roman" font-size="22" fill="#000080">Welcome to the DMV Online Services Portal</text>
+  <line x1="185" y1="120" x2="795" y2="120" stroke="#000080" stroke-width="2"/>
+  <!-- Badly formatted text block -->
+  <text x="190" y="140" font-family="Times" font-size="11" fill="black">Please note: This website is best viewed in Internet Explorer 6.0 at 1024x768 resolution.</text>
+  <text x="190" y="157" font-family="Times" font-size="11" fill="black">Some features may not work in other browsers. JavaScript must be enabled.</text>
+  <!-- Form with bad labels -->
+  <rect x="190" y="170" width="600" height="280" fill="#f0f0f0" stroke="#999"/>
+  <text x="200" y="195" font-family="Arial" font-size="13" fill="red">* = Required Field</text>
+  <text x="200" y="220" font-family="Arial" font-size="11" fill="black">First Name*:</text>
+  <rect x="290" y="205" width="200" height="22" fill="white" stroke="#666"/>
+  <text x="200" y="250" font-family="Arial" font-size="11" fill="black">Last Name*:</text>
+  <rect x="290" y="235" width="200" height="22" fill="white" stroke="#666"/>
+  <text x="200" y="280" font-family="Arial" font-size="11" fill="black">DOB (MM/DD/YY)*:</text>
+  <rect x="290" y="265" width="100" height="22" fill="white" stroke="#666"/>
+  <text x="200" y="310" font-family="Arial" font-size="11" fill="black">License #*:</text>
+  <rect x="290" y="295" width="200" height="22" fill="white" stroke="#666"/>
+  <!-- Submit button: terrible -->
+  <rect x="200" y="360" width="120" height="35" fill="#000080"/>
+  <text x="220" y="382" font-family="Arial" font-size="12" fill="white" font-weight="bold">SUBMIT FORM</text>
+  <rect x="340" y="360" width="120" height="35" fill="#808080"/>
+  <text x="360" y="382" font-family="Arial" font-size="12" fill="white">CLEAR FORM</text>
+  <!-- Footer -->
+  <rect x="0" y="560" width="800" height="40" fill="#000080"/>
+  <text x="10" y="578" font-family="Arial" font-size="9" fill="white">© 2004 Department of Motor Vehicles | Best viewed in IE6 | This site was last updated: March 14, 2004</text>
+  <text x="10" y="592" font-family="Arial" font-size="9" fill="yellow">Visitors: [Counter not available] | You are visitor #</text>
+</svg>

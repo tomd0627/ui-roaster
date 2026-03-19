@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Over-engineered analytics dashboard: everything at once -->
+  <rect width="800" height="600" fill="#1a1a2e"/>
+  <!-- Sidebar -->
+  <rect width="60" height="600" fill="#16213e"/>
+  <circle cx="30" cy="30" r="12" fill="#0f3460"/>
+  <rect x="10" y="70" width="40" height="40" rx="8" fill="#0f3460"/>
+  <rect x="10" y="120" width="40" height="40" rx="8" fill="#533483"/>
+  <rect x="10" y="170" width="40" height="40" rx="8" fill="#0f3460"/>
+  <rect x="10" y="220" width="40" height="40" rx="8" fill="#0f3460"/>
+  <rect x="10" y="270" width="40" height="40" rx="8" fill="#0f3460"/>
+  <!-- Top bar -->
+  <rect x="60" y="0" width="740" height="50" fill="#16213e"/>
+  <text x="75" y="32" font-family="Arial" font-size="14" fill="white" font-weight="bold">Analytics Dashboard Pro™ Enterprise Edition</text>
+  <!-- 12 widgets crammed in -->
+  <!-- Row 1: metric cards (too many, too small) -->
+  <rect x="70" y="60" width="110" height="70" rx="6" fill="#0f3460"/>
+  <text x="125" y="85" font-family="Arial" font-size="9" fill="#8888aa" text-anchor="middle">TOTAL REVENUE</text>
+  <text x="125" y="105" font-family="Arial" font-size="16" fill="white" font-weight="bold" text-anchor="middle">$2.4M</text>
+  <text x="125" y="120" font-family="Arial" font-size="8" fill="#00ff88" text-anchor="middle">↑ 12.4% vs last period</text>
+
+  <rect x="190" y="60" width="110" height="70" rx="6" fill="#0f3460"/>
+  <text x="245" y="85" font-family="Arial" font-size="9" fill="#8888aa" text-anchor="middle">ACTIVE USERS</text>
+  <text x="245" y="105" font-family="Arial" font-size="16" fill="white" font-weight="bold" text-anchor="middle">48,291</text>
+  <text x="245" y="120" font-family="Arial" font-size="8" fill="#ff4444" text-anchor="middle">↓ 3.2% vs last period</text>
+
+  <rect x="310" y="60" width="110" height="70" rx="6" fill="#0f3460"/>
+  <text x="365" y="85" font-family="Arial" font-size="9" fill="#8888aa" text-anchor="middle">CONVERSION</text>
+  <text x="365" y="105" font-family="Arial" font-size="16" fill="white" font-weight="bold" text-anchor="middle">3.7%</text>
+  <text x="365" y="120" font-family="Arial" font-size="8" fill="#00ff88" text-anchor="middle">↑ 0.8% vs last period</text>
+
+  <rect x="430" y="60" width="110" height="70" rx="6" fill="#0f3460"/>
+  <text x="485" y="85" font-family="Arial" font-size="9" fill="#8888aa" text-anchor="middle">AVG SESSION</text>
+  <text x="485" y="105" font-family="Arial" font-size="16" fill="white" font-weight="bold" text-anchor="middle">4m 12s</text>
+  <text x="485" y="120" font-family="Arial" font-size="8" fill="#00ff88" text-anchor="middle">↑ 7.1% vs last period</text>
+
+  <rect x="550" y="60" width="110" height="70" rx="6" fill="#0f3460"/>
+  <text x="605" y="85" font-family="Arial" font-size="9" fill="#8888aa" text-anchor="middle">BOUNCE RATE</text>
+  <text x="605" y="105" font-family="Arial" font-size="16" fill="white" font-weight="bold" text-anchor="middle">41.2%</text>
+  <text x="605" y="120" font-family="Arial" font-size="8" fill="#ff4444" text-anchor="middle">↑ 2.1% vs last period</text>
+
+  <rect x="670" y="60" width="110" height="70" rx="6" fill="#0f3460"/>
+  <text x="725" y="85" font-family="Arial" font-size="9" fill="#8888aa" text-anchor="middle">PAGEVIEWS</text>
+  <text x="725" y="105" font-family="Arial" font-size="16" fill="white" font-weight="bold" text-anchor="middle">1.2M</text>
+  <text x="725" y="120" font-family="Arial" font-size="8" fill="#00ff88" text-anchor="middle">↑ 22% vs last period</text>
+
+  <!-- Chart: spiky line chart with no breathing room -->
+  <rect x="70" y="140" width="460" height="200" rx="6" fill="#0f3460"/>
+  <text x="80" y="160" font-family="Arial" font-size="10" fill="#8888aa">Revenue vs Users vs Pageviews vs Sessions (last 90d)</text>
+  <!-- Fake chart lines -->
+  <polyline points="80,310 120,280 160,295 200,260 240,270 260,240 300,255 340,220 380,235 420,210 460,225 500,195" fill="none" stroke="#00ff88" stroke-width="1.5"/>
+  <polyline points="80,310 120,300 160,310 200,295 240,305 260,290 300,300 340,280 380,295 420,275 460,285 500,265" fill="none" stroke="#4488ff" stroke-width="1.5"/>
+  <polyline points="80,330 120,310 160,320 200,305 240,315 260,300 300,310 340,300 380,305 420,290 460,295 500,280" fill="none" stroke="#ff8844" stroke-width="1.5"/>
+  <!-- Legend: tiny, low contrast -->
+  <circle cx="80" cy="345" r="4" fill="#00ff88"/>
+  <text x="88" y="349" font-family="Arial" font-size="8" fill="#666">Revenue</text>
+  <circle cx="130" cy="345" r="4" fill="#4488ff"/>
+  <text x="138" y="349" font-family="Arial" font-size="8" fill="#666">Users</text>
+  <circle cx="175" cy="345" r="4" fill="#ff8844"/>
+  <text x="183" y="349" font-family="Arial" font-size="8" fill="#666">Pageviews</text>
+
+  <!-- Data table: too dense -->
+  <rect x="540" y="140" width="240" height="200" rx="6" fill="#0f3460"/>
+  <text x="550" y="160" font-family="Arial" font-size="10" fill="#8888aa">Top Pages</text>
+  <text x="550" y="180" font-family="Arial" font-size="9" fill="white">/home</text>
+  <text x="740" y="180" font-family="Arial" font-size="9" fill="#00ff88" text-anchor="end">12,481</text>
+  <text x="550" y="196" font-family="Arial" font-size="9" fill="white">/dashboard/analytics/overview</text>
+  <text x="740" y="196" font-family="Arial" font-size="9" fill="#00ff88" text-anchor="end">9,204</text>
+  <text x="550" y="212" font-family="Arial" font-size="9" fill="white">/pricing</text>
+  <text x="740" y="212" font-family="Arial" font-size="9" fill="white" text-anchor="end">7,891</text>
+  <text x="550" y="228" font-family="Arial" font-size="9" fill="white">/blog/post-247</text>
+  <text x="740" y="228" font-family="Arial" font-size="9" fill="white" text-anchor="end">5,443</text>
+  <text x="550" y="244" font-family="Arial" font-size="9" fill="white">/features/integration</text>
+  <text x="740" y="244" font-family="Arial" font-size="9" fill="white" text-anchor="end">4,102</text>
+  <!-- Bottom section: pie chart + alerts + map cramped together -->
+  <rect x="70" y="350" width="210" height="230" rx="6" fill="#0f3460"/>
+  <text x="80" y="370" font-family="Arial" font-size="10" fill="#8888aa">Traffic Sources</text>
+  <circle cx="175" cy="460" r="70" fill="none" stroke="#533483" stroke-width="35" stroke-dasharray="110 110"/>
+  <circle cx="175" cy="460" r="70" fill="none" stroke="#0f3460" stroke-width="35" stroke-dasharray="55 165" stroke-dashoffset="-110"/>
+  <text x="175" y="465" font-family="Arial" font-size="9" fill="white" text-anchor="middle">Organic 42%</text>
+  <rect x="290" y="350" width="480" height="230" rx="6" fill="#0f3460"/>
+  <text x="300" y="370" font-family="Arial" font-size="10" fill="#8888aa">User Geography Heat Map (placeholder)</text>
+  <rect x="300" y="380" width="460" height="190" rx="4" fill="#0a0a1a" opacity="0.6"/>
+  <text x="530" y="475" font-family="Arial" font-size="11" fill="#333" text-anchor="middle">Map data loading...</text>
+</svg>

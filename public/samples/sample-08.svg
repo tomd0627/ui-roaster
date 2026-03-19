@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Clean, minimal portfolio: good design but could be improved -->
+  <rect width="800" height="600" fill="#fafaf8"/>
+  <!-- Nav: clean but very sparse -->
+  <text x="48" y="46" font-family="Georgia, serif" font-size="18" fill="#1a1a1a" font-weight="bold">Alex Chen</text>
+  <text x="560" y="46" font-family="Inter, Arial" font-size="13" fill="#555">Work</text>
+  <text x="620" y="46" font-family="Inter, Arial" font-size="13" fill="#555">About</text>
+  <text x="680" y="46" font-family="Inter, Arial" font-size="13" fill="#555">Contact</text>
+  <line x1="0" y1="64" x2="800" y2="64" stroke="#e5e5e5" stroke-width="1"/>
+  <!-- Hero: too much whitespace, not enough info -->
+  <text x="48" y="170" font-family="Georgia, serif" font-size="52" fill="#1a1a1a">Product</text>
+  <text x="48" y="230" font-family="Georgia, serif" font-size="52" fill="#1a1a1a">Designer.</text>
+  <text x="48" y="285" font-family="Inter, Arial" font-size="16" fill="#777">Currently at Figma · San Francisco</text>
+  <rect x="48" y="315" width="140" height="46" rx="4" fill="#1a1a1a"/>
+  <text x="118" y="343" font-family="Inter, Arial" font-size="14" fill="white" text-anchor="middle">View My Work</text>
+  <!-- Subtle issue: no secondary CTA, no description of what kind of design work -->
+  <line x1="0" y1="420" x2="800" y2="420" stroke="#e5e5e5" stroke-width="1"/>
+  <!-- Work section: just titles, no preview or description -->
+  <text x="48" y="460" font-family="Georgia, serif" font-size="28" fill="#1a1a1a">Selected Work</text>
+  <!-- Project cards: missing context -->
+  <rect x="48" y="490" width="220" height="85" rx="6" fill="#f0efec"/>
+  <text x="68" y="528" font-family="Inter, Arial" font-size="13" fill="#1a1a1a" font-weight="500">Clarity Design System</text>
+  <text x="68" y="548" font-family="Inter, Arial" font-size="11" fill="#888">2024</text>
+  <rect x="288" y="490" width="220" height="85" rx="6" fill="#f0efec"/>
+  <text x="308" y="528" font-family="Inter, Arial" font-size="13" fill="#1a1a1a" font-weight="500">Onboarding Redesign</text>
+  <text x="308" y="548" font-family="Inter, Arial" font-size="11" fill="#888">2023</text>
+  <rect x="528" y="490" width="220" height="85" rx="6" fill="#f0efec"/>
+  <text x="548" y="528" font-family="Inter, Arial" font-size="13" fill="#1a1a1a" font-weight="500">Mobile Banking App</text>
+  <text x="548" y="548" font-family="Inter, Arial" font-size="11" fill="#888">2023</text>
+  <!-- Overall: clean but too minimal, lacks personality/content -->
+  <!-- Invisible issue: no alt text indicators, no focus states shown -->
+</svg>
