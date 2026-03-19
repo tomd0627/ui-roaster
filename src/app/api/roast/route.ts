@@ -10,9 +10,6 @@ import type {
   RoastResponseBody,
 } from "@/types";
 
-// Validate env at module initialization — throws at startup if key is missing
-validateEnv();
-
 function errorResponse(
   code: ApiErrorBody["error"],
   message: string,
@@ -32,6 +29,9 @@ function getClientIp(request: NextRequest): string {
 export async function POST(
   request: NextRequest
 ): Promise<NextResponse<RoastResponseBody | ApiErrorBody>> {
+  // Validate env at request time so it doesn't throw during build
+  validateEnv();
+
   // Rate limiting
   const ip = getClientIp(request);
   const { allowed } = checkRateLimit(ip);
