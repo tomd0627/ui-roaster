@@ -71,7 +71,7 @@ export function HeatMeter({ score: rawScore }: HeatMeterProps) {
               >
                 <path
                   d="M16 2C16 2 23 9 23 17C23 22.5 19.5 26.5 16 29C12.5 26.5 9 22.5 9 17C9 9 16 2 16 2Z"
-                  fill={filled ? "#FF4D6D" : "var(--color-text-muted)"}
+                  fill={filled ? "var(--color-heat)" : "var(--color-text-muted)"}
                 />
               </svg>
             );

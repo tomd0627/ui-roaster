@@ -36,10 +36,13 @@ export function ShareBar({ roast, onReset }: ShareBarProps) {
 
   return (
     <div className="flex flex-col gap-3 sm:flex-row">
+      <output aria-live="polite" aria-atomic="true" className="sr-only">
+        {copied ? "Roast copied to clipboard" : ""}
+      </output>
       <button
+        type="button"
         onClick={handleCopy}
         aria-label={copied ? "Roast copied to clipboard" : "Copy roast to clipboard"}
-        aria-live="polite"
         className="flex flex-1 items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-all"
         style={{
           border: "1px solid var(--color-digital)",
@@ -68,6 +71,7 @@ export function ShareBar({ roast, onReset }: ShareBarProps) {
       </button>
 
       <button
+        type="button"
         onClick={onReset}
         aria-label="Start over with a new screenshot"
         className="flex flex-1 items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-all"

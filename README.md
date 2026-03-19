@@ -2,8 +2,6 @@
 
 An AI-powered UI critique tool. Drop a screenshot — get a brutally honest, structured roast of your design's visual quality, UX, accessibility, typography, and layout.
 
-Built with Next.js 15, Tailwind CSS v4, and the Claude Sonnet API.
-
 ## Setup
 
 ```bash
@@ -15,10 +13,10 @@ npm run dev
 
 ## Environment Variables
 
-| Variable | Required | Description |
-|---|---|---|
-| `ANTHROPIC_API_KEY` | Yes | Anthropic Claude API key — get one at [console.anthropic.com](https://console.anthropic.com/) |
-| `NEXT_PUBLIC_SITE_URL` | No | Public URL for OG metadata (defaults to `https://ui-roaster.netlify.app`) |
+| Variable               | Required | Description                                                                                   |
+| ---------------------- | -------- | --------------------------------------------------------------------------------------------- |
+| `ANTHROPIC_API_KEY`    | Yes      | Anthropic Claude API key — get one at [console.anthropic.com](https://console.anthropic.com/) |
+| `NEXT_PUBLIC_SITE_URL` | No       | Public URL for OG metadata (defaults to `https://ui-roaster.netlify.app`)                     |
 
 ## Tech Stack
 

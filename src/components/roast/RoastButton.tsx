@@ -11,7 +11,7 @@ export function RoastButton({ onClick, isLoading, isDisabled }: RoastButtonProps
     ? "Roasting..."
     : isDisabled
       ? "Drop a screenshot first"
-      : "Roast It 🔥";
+      : "Roast It";
 
   return (
     <button
@@ -43,7 +43,10 @@ export function RoastButton({ onClick, isLoading, isDisabled }: RoastButtonProps
           Roasting...
         </>
       ) : (
-        label
+        <>
+          {label}
+          {!isDisabled && <span aria-hidden="true"> 🔥</span>}
+        </>
       )}
     </button>
   );

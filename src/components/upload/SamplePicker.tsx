@@ -33,7 +33,7 @@ export function SamplePicker({ onSelectSample, isDisabled = false }: SamplePicke
         onClick={handleClick}
         disabled={isDisabled}
         aria-disabled={isDisabled}
-        className="flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-50"
+        className="flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-colors cursor-pointer disabled:cursor-not-allowed disabled:opacity-50"
         style={{
           color: "var(--color-digital)",
           border: "1px solid var(--color-digital-hover)",
