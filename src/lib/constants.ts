@@ -26,7 +26,7 @@ export const RATE_LIMIT_WINDOW_MS = 60_000; // 1 minute
 // ── Claude API ────────────────────────────────────────────────────────────────
 
 export const CLAUDE_MODEL = "claude-sonnet-4-6";
-export const CLAUDE_MAX_TOKENS = 1024;
+export const CLAUDE_MAX_TOKENS = 2048;
 
 // ── Loading messages (cycling during AI analysis) ─────────────────────────────
 

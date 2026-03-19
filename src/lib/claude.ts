@@ -5,7 +5,7 @@ import type { AcceptedMimeType, RoastResult } from "@/types";
 
 // Singleton client — initialized once at module level
 const anthropic = new Anthropic({
-  apiKey: process.env["ANTHROPIC_API_KEY"],
+  apiKey: process.env.ANTHROPIC_API_KEY,
 });
 
 const SYSTEM_PROMPT = `You are a ruthlessly honest UI/UX design critic with deep expertise in visual design, accessibility (WCAG 2.1), typography, user experience, and modern web standards. Your job is to "roast" UI screenshots with wit, precision, and specific technical insight. You are entertaining but never cruel — your goal is improvement, delivered with humor. You must respond ONLY with valid JSON matching the schema provided. Do not include markdown code fences or any text outside the JSON object.`;
@@ -120,11 +120,12 @@ export async function callClaude(
 
   const rawText = (firstBlock as TextBlock).text.trim();
 
-  // Strip markdown code fences if Claude wrapped the JSON despite instructions
-  const jsonText = rawText
-    .replace(/^```(?:json)?\s*/i, "")
-    .replace(/\s*```\s*$/i, "")
-    .trim();
+  // Extract JSON object — find the first { and last } to handle preamble/postamble
+  const start = rawText.indexOf("{");
+  const end = rawText.lastIndexOf("}");
+  const jsonText = start !== -1 && end !== -1 && end > start
+    ? rawText.slice(start, end + 1)
+    : rawText;
 
   try {
     const parsed: unknown = JSON.parse(jsonText);
