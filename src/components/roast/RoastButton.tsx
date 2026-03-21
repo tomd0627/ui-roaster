@@ -1,5 +1,7 @@
 "use client";
 
+import { Flame } from "lucide-react";
+
 interface RoastButtonProps {
   onClick: () => void;
   isLoading: boolean;
@@ -45,7 +47,7 @@ export function RoastButton({ onClick, isLoading, isDisabled }: RoastButtonProps
       ) : (
         <>
           {label}
-          {!isDisabled && <span aria-hidden="true"> 🔥</span>}
+          {!isDisabled && <Flame size={18} aria-hidden={true} />}
         </>
       )}
     </button>
