@@ -1,7 +1,6 @@
 "use client";
 
 import { useDropzone } from "react-dropzone";
-import { MAX_FILE_SIZE_BYTES } from "@/lib/constants";
 
 interface DropZoneProps {
   onFilesAccepted: (files: File[]) => void;
@@ -12,11 +11,10 @@ export function DropZone({ onFilesAccepted, isDisabled = false }: DropZoneProps)
   const { getRootProps, getInputProps, isDragActive, isDragReject } = useDropzone({
     onDrop: onFilesAccepted,
     accept: {
-      "image/png": [],
-      "image/jpeg": [],
-      "image/webp": [],
+      "image/png": [".png", ".PNG"],
+      "image/jpeg": [".jpg", ".jpeg", ".JPG", ".JPEG"],
+      "image/webp": [".webp", ".WEBP"],
     },
-    maxSize: MAX_FILE_SIZE_BYTES,
     maxFiles: 1,
     disabled: isDisabled,
     multiple: false,
