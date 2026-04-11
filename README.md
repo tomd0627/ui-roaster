@@ -27,11 +27,14 @@ npm run dev
 
 ## Features
 
+- Demo roast shown on first visit — visitors see a result immediately with a CTA to upload their own screenshot
 - Drag-and-drop or click-to-upload (PNG, JPG, WebP — max 5 MB)
 - Client-side image compression before sending to API
 - 8 curated sample UIs via the "Try a Sample" randomizer
 - Structured critique across 5 categories: Visual Design, UX, Accessibility, Typography, Layout & Spacing
+- Per-category numeric scores (1–10) displayed as badges alongside severity labels
 - Heat Level meter (1–10 severity score)
+- "Roast This Page" bookmarklet — captures any page via html2canvas and sends it to the roaster (desktop only)
 - Copy-to-clipboard roast export
 - WCAG 2.1 AA accessible throughout
 - Rate limited (10 req/min per IP)
