@@ -27,6 +27,7 @@ export type RoastStatus = "idle" | "loading" | "success" | "error";
 export interface RoastCategory {
   id: CategoryId;
   title: string;
+  score: number;
   severity: Severity;
   critique: string;
   suggestion: string;

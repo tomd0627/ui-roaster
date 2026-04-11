@@ -20,6 +20,7 @@ Return ONLY a JSON object with this exact structure — no markdown, no preamble
     {
       "id": "visual-design",
       "title": "Visual Design",
+      "score": <integer 1-10, where 10 is catastrophically bad>,
       "severity": <1|2|3>,
       "critique": "<1-3 sentences of specific, witty critique referencing actual elements in the image>",
       "suggestion": "<1-2 sentences of actionable improvement>"
@@ -27,6 +28,7 @@ Return ONLY a JSON object with this exact structure — no markdown, no preamble
     {
       "id": "ux",
       "title": "User Experience",
+      "score": <integer 1-10, where 10 is catastrophically bad>,
       "severity": <1|2|3>,
       "critique": "<specific UX issues you can see — navigation, affordances, hierarchy>",
       "suggestion": "<actionable UX improvement>"
@@ -34,6 +36,7 @@ Return ONLY a JSON object with this exact structure — no markdown, no preamble
     {
       "id": "accessibility",
       "title": "Accessibility",
+      "score": <integer 1-10, where 10 is catastrophically bad>,
       "severity": <1|2|3>,
       "critique": "<contrast, focus indicators, text sizing, touch targets — be specific to what you see>",
       "suggestion": "<WCAG 2.1 AA remediation advice>"
@@ -41,6 +44,7 @@ Return ONLY a JSON object with this exact structure — no markdown, no preamble
     {
       "id": "typography",
       "title": "Typography",
+      "score": <integer 1-10, where 10 is catastrophically bad>,
       "severity": <1|2|3>,
       "critique": "<type hierarchy, readability, font pairing, line height, letter spacing>",
       "suggestion": "<actionable typography fix>"
@@ -48,6 +52,7 @@ Return ONLY a JSON object with this exact structure — no markdown, no preamble
     {
       "id": "layout",
       "title": "Layout & Spacing",
+      "score": <integer 1-10, where 10 is catastrophically bad>,
       "severity": <1|2|3>,
       "critique": "<grid alignment, whitespace, visual rhythm, responsive considerations>",
       "suggestion": "<actionable layout fix>"
@@ -55,6 +60,7 @@ Return ONLY a JSON object with this exact structure — no markdown, no preamble
   ]
 }
 
+Score scale (per category): 1 = nearly flawless, 10 = catastrophically bad. Use the full range.
 Severity scale: 1 = mild (could be better), 2 = notable problem, 3 = needs immediate attention.
 Be specific — reference actual elements you can see in the image.
 If the UI is genuinely good in an area, give it a low severity score with a witty compliment, but still find room to improve.`;

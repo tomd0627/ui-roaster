@@ -74,7 +74,7 @@ function CategoryIcon({ id }: { id: string }) {
   }
 }
 
-function SeverityBadge({ severity }: { severity: 1 | 2 | 3 }) {
+function SeverityBadge({ severity, score }: { severity: 1 | 2 | 3; score?: number }) {
   const config = {
     1: { label: "Mild", color: "var(--color-severity-low)" },
     2: { label: "Notable", color: "var(--color-severity-mid)" },
@@ -82,16 +82,31 @@ function SeverityBadge({ severity }: { severity: 1 | 2 | 3 }) {
   }[severity];
 
   return (
-    <span
-      className="rounded-full px-2 py-0.5 text-xs font-semibold"
-      style={{
-        color: config.color,
-        border: `1px solid ${config.color}`,
-        backgroundColor: `color-mix(in srgb, ${config.color} 12%, transparent)`,
-      }}
-    >
-      {config.label}
-    </span>
+    <div className="flex items-center gap-1.5">
+      {score !== undefined && (
+        <span
+          className="rounded-full px-2 py-0.5 text-xs font-bold tabular-nums"
+          style={{
+            color: config.color,
+            border: `1px solid ${config.color}`,
+            backgroundColor: `color-mix(in srgb, ${config.color} 12%, transparent)`,
+            fontFamily: "var(--font-jetbrains-mono, monospace)",
+          }}
+        >
+          {score}/10
+        </span>
+      )}
+      <span
+        className="rounded-full px-2 py-0.5 text-xs font-semibold"
+        style={{
+          color: config.color,
+          border: `1px solid ${config.color}`,
+          backgroundColor: `color-mix(in srgb, ${config.color} 12%, transparent)`,
+        }}
+      >
+        {config.label}
+      </span>
+    </div>
   );
 }
 
@@ -134,7 +149,7 @@ export function RoastCategory({ category, index }: RoastCategoryProps) {
               {category.title}
             </h3>
           </div>
-          <SeverityBadge severity={category.severity} />
+          <SeverityBadge severity={category.severity} score={category.score} />
         </div>
 
         {/* Critique */}
