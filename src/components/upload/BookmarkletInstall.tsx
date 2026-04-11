@@ -79,9 +79,6 @@ export function BookmarkletInstall() {
         <span className="text-xs font-normal opacity-60">← drag to bookmarks bar</span>
       </a>
 
-      <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
-        Click it on any website to capture and roast that page automatically.
-      </p>
     </div>
   );
 }
