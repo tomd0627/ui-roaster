@@ -36,11 +36,13 @@ export function RoasterShell() {
   };
 
   // Bookmarklet: receive screenshot from the browser extension, auto-submit
+  const [bookmarkletError, setBookmarkletError] = useState<string | null>(null);
   const { loadFromBase64 } = upload;
   const { submitRoast } = roast;
   const handleBookmarkletReceive = useCallback(
     async (imageBase64: string, mimeType: AcceptedMimeType) => {
       setIsDemo(false);
+      setBookmarkletError(null);
       const result = await loadFromBase64(imageBase64, mimeType);
       if (result) {
         void submitRoast(result.base64, result.mimeType);
@@ -48,7 +50,11 @@ export function RoasterShell() {
     },
     [loadFromBase64, submitRoast]
   );
-  useBookmarkletReceiver(handleBookmarkletReceive);
+  const handleBookmarkletError = useCallback((message: string) => {
+    setIsDemo(false);
+    setBookmarkletError(message);
+  }, []);
+  useBookmarkletReceiver(handleBookmarkletReceive, handleBookmarkletError);
 
   // Show demo on first visit
   if (isDemo) {
@@ -141,6 +147,26 @@ export function RoasterShell() {
             <line x1="12" y1="16" x2="12.01" y2="16" />
           </svg>
           {roast.error ?? ERROR_MESSAGES.GENERIC}
+        </div>
+      )}
+
+      {/* Bookmarklet capture error */}
+      {bookmarkletError && (
+        <div
+          role="alert"
+          className="flex items-start gap-2 rounded-md px-4 py-3 text-sm"
+          style={{
+            backgroundColor: "var(--color-heat-muted)",
+            color: "var(--color-heat)",
+            border: "1px solid var(--color-heat)",
+          }}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" width={16} height={16} className="mt-0.5 shrink-0" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
+          </svg>
+          {bookmarkletError}
         </div>
       )}
 

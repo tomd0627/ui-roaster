@@ -9,9 +9,11 @@ const BOOKMARKLET_SOURCE =
   "var w=window.open(o+'/?from=bookmarklet','ui-roaster');" +
   "if(!w){alert('Allow popups for this site to use the Roast This Page bookmarklet.');return;}" +
   "var b=null,r=false,done=false;" +
+  // Sends an error to the roaster window instead of alerting on the captured page.
+  "function err(msg){if(!done){done=true;clearTimeout(abort);if(w&&!w.closed)w.postMessage({type:'ROAST_ERROR',message:msg},o);}}" +
   // Overall timeout — if the capture hangs (e.g. news sites with many cross-origin images),
   // abort after 12s instead of hanging forever.
-  "var abort=setTimeout(function(){if(!done){done=true;alert('This page took too long to capture. Try uploading a screenshot manually.');}},12000);" +
+  "var abort=setTimeout(function(){err('This page took too long to capture — it may be blocking screenshot tools. Try uploading a screenshot manually.');},12000);" +
   "function snd(){if(b&&r&&!done){done=true;clearTimeout(abort);w.postMessage({type:'ROAST_IMAGE',imageBase64:b,mimeType:'image/jpeg'},o);}}" +
   "window.addEventListener('message',function h(e){" +
   "if(e.origin!==o||!e.data||e.data.type!=='ROASTER_READY')return;" +
@@ -26,15 +28,15 @@ const BOOKMARKLET_SOURCE =
   ".then(function(c){" +
   "try{" +
   "c.toBlob(function(blob){" +
-  "if(!blob){if(!done){done=true;clearTimeout(abort);alert('Could not export screenshot. Try uploading manually.');}return;}" +
+  "if(!blob){err('Could not export screenshot — this page may be blocking capture tools. Try uploading a screenshot manually.');return;}" +
   "var fr=new FileReader();" +
   "fr.onload=function(){b=fr.result.split(',')[1];snd();};" +
   "fr.readAsDataURL(blob);" +
   "},'image/jpeg',0.8);" +
-  "}catch(err){if(!done){done=true;clearTimeout(abort);alert('Could not capture this page — it may be blocking screenshot tools. Try uploading a screenshot manually.');}}" +
-  "}).catch(function(){if(!done){done=true;clearTimeout(abort);alert('Could not capture this page. Try uploading a screenshot manually.');}});" +
+  "}catch(e){err('Could not capture this page — it may be blocking screenshot tools. Try uploading a screenshot manually.');}" +
+  "}).catch(function(){err('Could not capture this page. Try uploading a screenshot manually.');});" +
   "};" +
-  "el.onerror=function(){if(!done){done=true;clearTimeout(abort);alert('Failed to load screenshot library. Please try again.');}};" +
+  "el.onerror=function(){err('Failed to load screenshot library. Please try again.');};" +
   "document.head.appendChild(el);" +
   "})()";
 
