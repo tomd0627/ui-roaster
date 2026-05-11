@@ -9,14 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.93.0",
+    "@anthropic-ai/sdk": "^0.95.1",
     "clsx": "^2.1.1",
     "lucide-react": "^1.14.0",
-    "next": "^16.2.4",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5",
+    "next": "^16.2.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
     "react-dropzone": "^15.0.0",
-    "tailwind-merge": "^3.5.0"
+    "tailwind-merge": "^3.6.0"
   },
   "browserslist": [
     "last 2 Chrome versions",
@@ -25,13 +25,13 @@
     "last 2 Safari versions"
   ],
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^5.15.10",
+    "@netlify/plugin-nextjs": "^5.15.11",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^25.6.0",
+    "@types/node": "^25.6.2",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^10.3.0",
-    "eslint-config-next": "^16.2.4",
+    "eslint-config-next": "^16.2.6",
     "tailwindcss": "^4",
     "typescript": "^6.0.2"
   }
